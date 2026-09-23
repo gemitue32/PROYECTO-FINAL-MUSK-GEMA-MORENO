@@ -5,6 +5,7 @@ class Client:
         self.country = country
         self.signup_date = signup_date
 
+    # Convierte el objeto a un diccionario Python para poder exportarlo como JSON.
     def to_dict(self):
         return {
             "client_id": self.client_id,

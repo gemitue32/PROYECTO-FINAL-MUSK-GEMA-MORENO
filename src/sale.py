@@ -7,6 +7,7 @@ class Sale:
         self.amount = amount
         self.date = date
 
+    # Convierte el objeto a un diccionario Python para poder exportarlo como JSON
     def to_dict(self):
         return {
             "sale_id": self.sale_id,
