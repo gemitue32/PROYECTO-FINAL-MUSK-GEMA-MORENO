@@ -1,3 +1,6 @@
+import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import json
 import csv
 import pandas as pd
@@ -153,6 +156,11 @@ def generate_report():
     }
     return report
 
+if __name__ == "__main__":
+    report = generate_report()
+    with open("final_report.json", "w") as archivo:
+        json.dump(report, archivo, indent=4)
+        
 
 
 
